@@ -21,18 +21,29 @@ Wir haben das Projekt nicht in 2 Teile aufgeteil sondern Code with me verwendet 
 So konnten wir beide unserer Ideen umsetzen und es war allgemein angenehmer und hat mehr Spaß gemacht als allein zu coden.
 
 
+Benutzte Bibliotheken:
+
+random (um die kreise im Hintergrund zu randomizen)
+
+pygame (um formen und das spiel ansich zu kreieren)
+
+sys (für die font und um das Spiel zu beenden)
+
+os (um zu checken ob die level Textdatei vorhanden ist)
+
+
 Teil des Codes:
 
-If     game_state == MENU:
-        title_font = pygame.font.SysFont(None, 72)
-        title_text = title_font.render('GEOMETRY ASS', True, BLACK)
-        screen.blit(title_text, (WIDTH // 2 - title_text.get_width() // 2, HEIGHT // 3))
+        If     game_state == MENU:
+                title_font = pygame.font.SysFont(None, 72)
+                title_text = title_font.render('GEOMETRY ASS', True, BLACK)
+                screen.blit(title_text, (WIDTH // 2 - title_text.get_width() // 2, HEIGHT // 3))
 
-        level_text = font.render(f"Level: {level_name}", True, BLACK)
-        screen.blit(level_text, (WIDTH // 2 - level_text.get_width() // 2, HEIGHT // 2 - 50))
+                level_text = font.render(f"Level: {level_name}", True, BLACK)
+                screen.blit(level_text, (WIDTH // 2 - level_text.get_width() // 2, HEIGHT // 2 - 50))
 
-        instruction_text = font.render("Press SPACE to Start", True, BLACK)
-        screen.blit(instruction_text, (WIDTH // 2 - instruction_text.get_width() // 2, HEIGHT // 2))
+                instruction_text = font.render("Press SPACE to Start", True, BLACK)
+                screen.blit(instruction_text, (WIDTH // 2 - instruction_text.get_width() // 2, HEIGHT // 2))
 
 Dieser Code zeigt im Spielzustand MENU drei Texte auf dem Bildschirm an:
 
